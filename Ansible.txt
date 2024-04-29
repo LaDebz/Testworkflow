@@ -1,0 +1,23 @@
+➢ Ad-hoc commands are commands which can be run individually to perform quick
+functions.
+➢ These ad-hoc commands are not used for configuration management and deployment, because these commands are of one-time usage.
+➢ The ansible ad-hoc commands uses the /usr/bin/ansible command line tool to automate a single task.
+
+Go to ansible server
+$ ansible demo -a “ls”
+$ ansible victor[0] -a “touch filez”
+$ ansible all -a “touchfile4”
+$ ansible demo -a “ls-al”
+$ ansible victor -a “sudo yum install httpd
+Host Patterns:
+# vi /etc/ansible/hosts
+“all” pattern refers to all the machines in an inventory
+Ansible all –list-host
+Ansible <group name> --list-hosts
+Ansible <groupname>[0] –list-hosts
+victor[0]- picks first machine of the group
+Groupname[1]- picks second machine of the group
+Groupname[-1]- picks last machine of the group
+Groupname[0:1]- picks first two machines of the group
+Groupname[2:5]- picks 3,4,5 and 6 machines of the group
+Group separated by colon (:) can be used to use hosts from mult
